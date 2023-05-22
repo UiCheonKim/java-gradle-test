@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation group: 'org.json', name: 'json', version: '20230227'
+
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.70'
+
+    implementation 'org.web3j:core:5.0.0'
+
+    implementation group: 'com.google.crypto.tink', name: 'tink', version: '1.9.0'
+
+
+    implementation 'com.github.jnr:jnr-ffi:x.y.z'
+
+}
+
+test {
+    useJUnitPlatform()
+}
